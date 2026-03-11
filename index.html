@@ -46,8 +46,8 @@
             <div class="nav-brand text-gradient">Seneca Premium Hub</div>
             <div class="nav-links">
                 <a href="#home" class="nav-link">Home</a>
-                <a href="#premium" class="nav-link">Premium Info</a>
-                <a href="#trust" class="nav-link">Synced Trust</a>
+                <a href="#premium" class="nav-link">Premium Schools</a>
+                <a href="#trust" class="nav-link">Synced Schools</a>
                 <button id="logout-btn" class="btn btn-secondary btn-small">Sign Out</button>
             </div>
         </nav>
@@ -84,14 +84,14 @@
                     <div class="card-icon premium-icon">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                    <h3 class="card-title">Click here if you are Premium</h3>
+                    <h3 class="card-title">Click here if you are a Premium School</h3>
                 </a>
                 
                 <a href="#trust" class="nav-card glass-panel interactive-card">
                     <div class="card-icon trust-icon">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
-                    <h3 class="card-title">Click here if you are a synced Trust school</h3>
+                    <h3 class="card-title">Click here if you are a Synced School</h3>
                 </a>
             </section>
 
@@ -129,7 +129,7 @@
         <main id="view-premium" class="view">
             <section class="section page-header">
                 <h1 class="section-title">Seneca <span class="text-gradient">Premium</span> Hub</h1>
-                <p class="section-subtitle">Welcome to your exclusive Premium toolkit.</p>
+                <p class="section-subtitle">Welcome to your exclusive Premium Schools toolkit.</p>
             </section>
             
             <section class="section">
@@ -144,13 +144,8 @@
                         <li>Teacher Content Sharing & Resource Hub Access</li>
                     </ul>
                     
-                    <div class="resource-links-container mt-4">
-                        <h4>Premium Resources</h4>
-                        <div class="resource-links">
-                            <a href="#" class="resource-link">Resource Link 1</a>
-                            <a href="#" class="resource-link">Resource Link 2</a>
-                            <a href="#" class="resource-link">Resource Link 3</a>
-                        </div>
+                    <div id="premium-resource-container" class="resource-links-container mt-4">
+                        <!-- Content injected statically via app.js -->
                     </div>
 
                     <button class="btn btn-secondary mt-4" onclick="window.location.hash='#home'">Back to Hub</button>
@@ -161,7 +156,7 @@
         <!-- Synced Trust Subpage View -->
         <main id="view-trust" class="view">
             <section class="section page-header">
-                <h1 class="section-title"><span class="text-gradient">Synced Trust</span> Portal</h1>
+                <h1 class="section-title"><span class="text-gradient">Synced Schools</span> Portal</h1>
                 <p class="section-subtitle">Unified management across all your schools.</p>
             </section>
             
@@ -177,13 +172,8 @@
                         <li>Live Webinar Trainings & Seneca Foundations Course</li>
                     </ul>
                     
-                    <div class="resource-links-container mt-4">
-                        <h4>Trust Resources</h4>
-                        <div class="resource-links">
-                            <a href="#" class="resource-link">Resource Link 1</a>
-                            <a href="#" class="resource-link">Resource Link 2</a>
-                            <a href="#" class="resource-link">Resource Link 3</a>
-                        </div>
+                    <div id="trust-resource-container" class="resource-links-container mt-4">
+                        <!-- Content injected statically via app.js -->
                     </div>
 
                     <button class="btn btn-secondary mt-4" onclick="window.location.hash='#home'">Back to Hub</button>

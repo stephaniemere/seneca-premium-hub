@@ -113,8 +113,50 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.hash = ''; // Triggers routing to login
     });
 
+    // --- Content Rendering ---
+    
+    const renderResources = (containerId, resourceData) => {
+        const container = document.getElementById(containerId);
+        if (!container || !resourceData) return;
+        
+        let htmlContent = '';
+        
+        resourceData.forEach(group => {
+            htmlContent += `
+                <div class="resource-group">
+                    <h4 class="resource-category-title">${group.category}</h4>
+                    <div class="resource-links">
+            `;
+            
+            group.links.forEach(link => {
+                // Determine icon based on type
+                const iconSvg = link.type === 'video' 
+                    ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>`
+                    : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>`;
+                    
+                htmlContent += `
+                    <a href="${link.url}" class="resource-link resource-type-${link.type}" target="_blank">
+                        <span class="resource-icon">${iconSvg}</span>
+                        ${link.title}
+                    </a>
+                `;
+            });
+            
+            htmlContent += `
+                    </div>
+                </div>
+            `;
+        });
+        
+        container.innerHTML = htmlContent;
+    };
+
     // --- Initialization ---
     
+    // Render dynamic content
+    renderResources('premium-resource-container', window.PREMIUM_RESOURCES);
+    renderResources('trust-resource-container', window.TRUST_RESOURCES);
+
     // Listen for hash changes to perform simple client-side routing
     window.addEventListener('hashchange', handleRouting);
     
