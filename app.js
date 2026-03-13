@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
         login: document.getElementById('view-login'),
         home: document.getElementById('view-home'),
         premium: document.getElementById('view-premium'),
-        trust: document.getElementById('view-trust')
+        trust: document.getElementById('view-trust'),
+        case: document.getElementById('view-case')
     };
 
     // --- Functions ---
@@ -59,6 +60,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 break;
             case 'trust':
                 showView('trust');
+                break;
+            case 'case':
+                showView('case');
                 break;
             case 'home':
             default:
@@ -119,7 +123,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const container = document.getElementById(containerId);
         if (!container || !resourceData) return;
         
-        let htmlContent = '';
+        let htmlContent = '<div class="resource-grid">';
         
         resourceData.forEach(group => {
             htmlContent += `
@@ -132,6 +136,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Determine icon based on type
                 const iconSvg = link.type === 'video' 
                     ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>`
+                    : link.type === 'course'
+                    ? `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path></svg>`
                     : `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>`;
                     
                 htmlContent += `
@@ -148,6 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
         });
         
+        htmlContent += '</div>';
         container.innerHTML = htmlContent;
     };
 

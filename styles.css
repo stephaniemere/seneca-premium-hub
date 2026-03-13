@@ -169,6 +169,7 @@ body {
     background: linear-gradient(to right, #1a1a1a, #4e4f51);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .login-subtitle {
@@ -406,6 +407,15 @@ body {
     margin: 0 auto;
 }
 
+/* Case Studies Grid */
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
 /* Navigation Cards Grid */
 .nav-cards-section {
     display: grid;
@@ -594,42 +604,61 @@ body {
 /* Resource Links */
 .resource-links-container {
     text-align: left;
-    max-width: 600px;
-    margin: 2rem auto 0;
-    padding-top: 1rem;
+    max-width: 1000px;
+    margin: 3rem auto 0;
+    padding-top: 2rem;
     border-top: 1px solid var(--glass-border);
 }
 
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 2.5rem;
+}
+
 .resource-group {
-    margin-top: 1.5rem;
+    margin-top: 0;
 }
 
 .resource-category-title {
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
-    color: var(--text-secondary);
-    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.resource-category-title::before {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 18px;
+    background: var(--accent-blue-start);
+    border-radius: 2px;
 }
 
 .resource-links {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 0.75rem;
 }
 
 .resource-link {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
+    gap: 0.75rem;
+    padding: 0.75rem 1.25rem;
     background: rgba(47, 145, 255, 0.05);
     color: var(--accent-blue-start);
-    border-radius: 8px;
+    border-radius: 12px;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 600;
     transition: all var(--transition-fast);
-    border: 1px solid rgba(47, 145, 255, 0.2);
-    font-size: 0.95rem;
+    border: 1px solid rgba(47, 145, 255, 0.15);
+    font-size: 1rem;
 }
 
 .resource-link.resource-type-pdf {

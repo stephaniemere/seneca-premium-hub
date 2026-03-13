@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,13 @@
     <!-- Modern Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <!-- Main CSS -->
     <link rel="stylesheet" href="styles.css">
     <meta name="description" content="Exclusive portal for Seneca Premium and Synced Trust schools.">
 </head>
+
 <body>
 
     <!-- Background decorative elements -->
@@ -25,8 +28,9 @@
             <div class="login-container glass-panel">
                 <div class="brand-logo text-gradient">Seneca Premium</div>
                 <h1 class="login-title">Welcome to the Hub</h1>
-                <p class="login-subtitle">Enter your school email to access exclusive resources, case studies, and premium content.</p>
-                
+                <p class="login-subtitle">Enter your school email to access exclusive resources, case studies, and
+                    premium content.</p>
+
                 <form id="login-form">
                     <div class="input-group">
                         <input type="email" id="email-input" placeholder="e.g. teacher@school.edu" required />
@@ -35,7 +39,10 @@
                     <div id="login-error" class="error-message"></div>
                     <button type="submit" class="btn btn-primary btn-glow">
                         <span>Access Hub</span>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="icon-arrow"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="icon-arrow">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </button>
                 </form>
             </div>
@@ -48,6 +55,7 @@
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#premium" class="nav-link">Premium Schools</a>
                 <a href="#trust" class="nav-link">Synced Schools</a>
+                <a href="#case" class="nav-link">Case Studies</a>
                 <button id="logout-btn" class="btn btn-secondary btn-small">Sign Out</button>
             </div>
         </nav>
@@ -56,14 +64,15 @@
         <main id="view-home" class="view">
             <!-- Hero Video Section -->
             <section class="section hero-section">
-                <h1 class="section-title">Highlights <span class="text-gradient">This Month</span></h1>
+                <h1 class="section-title">New This Month: <span class="text-gradient">Batch-setting Homework</span></h1>
                 <div class="video-container glass-panel">
-                    <div class="video-placeholder">
-                        <img id="placeholder-video" src="assets/highlights_video_thumbnail.png" alt="Video presentation thumbnail" onerror="this.style.display='none'">
-                        <button class="play-button">
-                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                        </button>
-                    </div>
+                    <iframe
+                        src="https://drive.google.com/file/d/1kxZi37LtJPth7kCxQlBu_6b8mQb_EtbJ/preview"
+                        allow="autoplay"
+                        allowfullscreen
+                        frameborder="0"
+                        style="width:100%; height:100%; border-radius: 16px;">
+                    </iframe>
                 </div>
             </section>
 
@@ -72,8 +81,10 @@
                 <div class="glass-panel info-card">
                     <h2 class="section-title">What is Seneca?</h2>
                     <p class="section-text">
-                        Seneca is the UK's fastest-growing homework and revision platform. We use cognitive science to make learning 2x faster, offering adaptive, engaging content that actually sticks. 
-                        Our platform empowers educators with robust analytics and gives students an unparalleled, gamified learning experience proven to boost outcomes.
+                        Seneca is the UK's fastest-growing homework and revision platform. We use cognitive science to
+                        make learning 2x faster, offering adaptive, engaging content that actually sticks.
+                        Our platform empowers educators with robust analytics and gives students an unparalleled,
+                        gamified learning experience proven to boost outcomes.
                     </p>
                 </div>
             </section>
@@ -82,14 +93,23 @@
             <section class="section nav-cards-section">
                 <a href="#premium" class="nav-card glass-panel interactive-card">
                     <div class="card-icon premium-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1 3-6z" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
                     </div>
                     <h3 class="card-title">Click here if you are a Premium School</h3>
                 </a>
-                
+
                 <a href="#trust" class="nav-card glass-panel interactive-card">
                     <div class="card-icon trust-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <path
+                                d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
                     <h3 class="card-title">Click here if you are a Synced School</h3>
                 </a>
@@ -101,23 +121,67 @@
                 <div class="testimonials-grid">
                     <div class="testimonial-card glass-panel">
                         <div class="quote-icon">"</div>
-                        <p class="testimonial-text">"Seneca Premium transformed our cohort's engagement. The automated marking saves our staff 10 hours a week, and students love the premium gamification."</p>
+                        <p class="testimonial-text">"This is brilliant for all learners, but especially for disaffected kids who refuse to do ‘traditional’ revision."</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar"><img src="assets/testimonial_avatar_1.png" alt="Author" onerror="this.style.backgroundColor='#4facfe'"></div>
+                            <div class="author-avatar"><div style="width:100%; height:100%; background:#4facfe; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">BW</div></div>
                             <div>
-                                <div class="author-name">Sarah Jenkins</div>
-                                <div class="author-role">Head of Science, Oakwood Academy</div>
+                                <div class="author-name">Becky White</div>
+                                <div class="author-role">Teacher</div>
                             </div>
                         </div>
                     </div>
                     <div class="testimonial-card glass-panel">
                         <div class="quote-icon">"</div>
-                        <p class="testimonial-text">"As a synced Trust, rolling out Seneca across 15 schools was seamless. The holistic data view across the entire trust is incredibly powerful for intervention."</p>
+                        <p class="testimonial-text">"Guarantee there will be students up and down the country who are at least a grade higher thanks to this lot. If your students don’t use Seneca, get them on it!"</p>
                         <div class="testimonial-author">
-                            <div class="author-avatar"><img src="assets/testimonial_avatar_2.png" alt="Author" onerror="this.style.backgroundColor='#bc4e9c'"></div>
+                            <div class="author-avatar"><div style="width:100%; height:100%; background:#bc4e9c; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">KG</div></div>
                             <div>
-                                <div class="author-name">David Okoro</div>
-                                <div class="author-role">Director of IT, Elevation Trust</div>
+                                <div class="author-name">Kyle Graham</div>
+                                <div class="author-role">Teacher</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-panel">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"In the actual words of many of our year 11s: “Seneca has saved my life.”"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><div style="width:100%; height:100%; background:#11998e; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">TN</div></div>
+                            <div>
+                                <div class="author-name">Tom Needham</div>
+                                <div class="author-role">Teacher</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-panel">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"I use Seneca everyday as a mathematics and computer science teacher and the material really engages the students. I can’t recommend this platform highly enough."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><div style="width:100%; height:100%; background:#38ef7d; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">MW</div></div>
+                            <div>
+                                <div class="author-name">Mr William</div>
+                                <div class="author-role">Maths & CS Teacher</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-panel">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"Evidence it works… One student completed 148 hours on Seneca. Was predicted 5s and achieved 9/8/8 in sciences. One awesome tool."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><div style="width:100%; height:100%; background:#f093fb; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">SS</div></div>
+                            <div>
+                                <div class="author-name">Singing Scientist</div>
+                                <div class="author-role">Teacher</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-panel">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"This platform was universally liked by my students. It provided an easy way of revising a range of subjects."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><div style="width:100%; height:100%; background:#fbd786; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">RB</div></div>
+                            <div>
+                                <div class="author-name">Ryn Bdham</div>
+                                <div class="author-role">Teacher</div>
                             </div>
                         </div>
                     </div>
@@ -131,7 +195,7 @@
                 <h1 class="section-title">Seneca <span class="text-gradient">Premium</span> Hub</h1>
                 <p class="section-subtitle">Welcome to your exclusive Premium Schools toolkit.</p>
             </section>
-            
+
             <section class="section">
                 <div class="glass-panel content-box">
                     <h3>Premium Benefits</h3>
@@ -143,7 +207,7 @@
                         <li>Student Report Cards & Centralised Gradebook</li>
                         <li>Teacher Content Sharing & Resource Hub Access</li>
                     </ul>
-                    
+
                     <div id="premium-resource-container" class="resource-links-container mt-4">
                         <!-- Content injected statically via app.js -->
                     </div>
@@ -159,7 +223,7 @@
                 <h1 class="section-title"><span class="text-gradient">Synced Schools</span> Portal</h1>
                 <p class="section-subtitle">Unified management across all your schools.</p>
             </section>
-            
+
             <section class="section">
                 <div class="glass-panel content-box">
                     <h3>Trust Sync Features</h3>
@@ -171,7 +235,7 @@
                         <li>Student Report Cards & Gradebook Tracking</li>
                         <li>Live Webinar Trainings & Seneca Foundations Course</li>
                     </ul>
-                    
+
                     <div id="trust-resource-container" class="resource-links-container mt-4">
                         <!-- Content injected statically via app.js -->
                     </div>
@@ -180,10 +244,145 @@
                 </div>
             </section>
         </main>
+        <!-- Case Studies View -->
+        <main id="view-case" class="view">
+            <section class="section page-header">
+                <h1 class="section-title">Seneca <span class="text-gradient">Case Studies</span></h1>
+                <p class="section-subtitle">Find out how other schools have used Seneca Premium to achieve success</p>
+            </section>
+
+            <section class="section">
+                <div class="case-studies-grid">
+                    <div class="glass-panel content-box interactive-card">
+                        <div class="card-icon premium-icon" style="margin: 0 auto 1.5rem;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                <path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path>
+                            </svg>
+                        </div>
+                        <h3>Stafford Grammar School</h3>
+                        <p class="section-text" style="font-size: 1.1rem; margin-bottom: 1rem;">
+                            <strong>56% increase in 9-7 GCSE grades</strong> after adopting Seneca Premium.
+                        </p>
+                        <p class="section-text" style="font-size: 0.95rem; text-align: left;">
+                            Stafford Grammar saw a marked improvement in attainment and engagement. Key impacts included:
+                        </p>
+                        <ul class="benefit-list" style="font-size: 0.9rem; margin-top: 1rem;">
+                            <li>56% increase in 9-7 grades at GCSE</li>
+                            <li>40% increase in A* grades at A-Level</li>
+                            <li>Significant boost in student homework engagement</li>
+                            <li>Reduced teacher workload via AI-powered marking</li>
+                        </ul>
+                        <a href="https://help.senecalearning.com/en/articles/11645658-stafford-grammar-a-56-increase-in-9-7-gcse-grades-with-seneca-premium-case-study" target="_blank" class="btn btn-secondary btn-small mt-4">Read Full Case Study</a>
+                    </div>
+                    <div class="glass-panel content-box interactive-card">
+                        <div class="card-icon trust-icon" style="margin: 0 auto 1.5rem;">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+                                <path d="M2 12h20"></path>
+                            </svg>
+                        </div>
+                        <h3>St George's International School</h3>
+                        <p class="section-text" style="font-size: 1.1rem; margin-bottom: 1rem;">
+                            <strong>Improving achievement</strong> via data-driven revision and Google integration.
+                        </p>
+                        <p class="section-text" style="font-size: 0.95rem; text-align: left;">
+                            The Director of Digital Learning identifies Seneca as a key tool for engagement:
+                        </p>
+                        <ul class="benefit-list" style="font-size: 0.9rem; margin-top: 1rem;">
+                            <li>Seamless Google Classroom integration</li>
+                            <li>Covers broad IGCSE, GCSE & KS3 curriculum</li>
+                            <li>Immediate feedback loop for students</li>
+                            <li>Insightful data for HODs and leadership</li>
+                        </ul>
+                        <a href="https://senecalearning.com/en-GB/blog/case-study-st-georges-british-international-school-rome/" target="_blank" class="btn btn-secondary btn-small mt-4">Read Full Case Study</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <section class="section testimonials-section">
+                <h2 class="section-title">Success Stories</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card glass-panel">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"This is brilliant for all learners, but especially for disaffected kids who refuse to do ‘traditional’ revision."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><div style="width:100%; height:100%; background:#4facfe; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">BW</div></div>
+                            <div>
+                                <div class="author-name">Becky White</div>
+                                <div class="author-role">Teacher</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-panel">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"Guarantee there will be students up and down the country who are at least a grade higher thanks to this lot. If your students don’t use Seneca, get them on it!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><div style="width:100%; height:100%; background:#bc4e9c; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">KG</div></div>
+                            <div>
+                                <div class="author-name">Kyle Graham</div>
+                                <div class="author-role">Teacher</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-panel">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"In the actual words of many of our year 11s: “Seneca has saved my life.”"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><div style="width:100%; height:100%; background:#11998e; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">TN</div></div>
+                            <div>
+                                <div class="author-name">Tom Needham</div>
+                                <div class="author-role">Teacher</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-panel">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"I use Seneca everyday as a mathematics and computer science teacher and the material really engages the students. I can’t recommend this platform highly enough."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><div style="width:100%; height:100%; background:#38ef7d; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">MW</div></div>
+                            <div>
+                                <div class="author-name">Mr William</div>
+                                <div class="author-role">Maths & CS Teacher</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-panel">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"Evidence it works… One student completed 148 hours on Seneca. Was predicted 5s and achieved 9/8/8 in sciences. One awesome tool."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><div style="width:100%; height:100%; background:#f093fb; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">SS</div></div>
+                            <div>
+                                <div class="author-name">Singing Scientist</div>
+                                <div class="author-role">Teacher</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card glass-panel">
+                        <div class="quote-icon">"</div>
+                        <p class="testimonial-text">"This platform was universally liked by my students. It provided an easy way of revising a range of subjects."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar"><div style="width:100%; height:100%; background:#fbd786; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold;">RB</div></div>
+                            <div>
+                                <div class="author-name">Ryn Bdham</div>
+                                <div class="author-role">Teacher</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section text-center">
+                <button class="btn btn-secondary" onclick="window.location.hash='#home'">Back to Hub</button>
+            </section>
+        </main>
     </div>
 
     <!-- App Scripts -->
-    <script src="data.js"></script>
-    <script src="app.js"></script>
+    <script src="data.js?v=2"></script>
+    <script src="app.js?v=2"></script>
 </body>
+
 </html>
